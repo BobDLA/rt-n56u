@@ -135,11 +135,9 @@ jobs:
         sudo ./build_firmware_modify $m 0
         sudo mkdir -p /opt/images
         sudo mv -f images/*.trx /opt/images/.
-        ls /opt/images
         done
     - name: Upload firmware directory
       uses: actions/upload-artifact@v2
-     # if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
         name: NEWIFI-MINI
         path: /opt/images/
