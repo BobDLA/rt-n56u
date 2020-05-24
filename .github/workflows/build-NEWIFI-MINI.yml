@@ -79,10 +79,6 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_ENABLE_EXT4/d' .config
         sed -i '/CONFIG_FIRMWARE_ENABLE_EXT3/d' .config
         sed -i '/CONFIG_FIRMWARE_ENABLE_EXT2/d' .config
-
-
-
-
         ######################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config #SCUTCLIENT
@@ -125,7 +121,6 @@ jobs:
         echo "CONFIG_FIRMWARE_ENABLE_EXT4=y" >> .config #minidla ~1.6
         echo "CONFIG_FIRMWARE_ENABLE_EXT3=n" >> .config #minidla ~1.6
         echo "CONFIG_FIRMWARE_ENABLE_EXT2=n" >> .config #minidla ~1.6
-
         ####################################################################################
         #if [ "$m" = "PSG1208" ] || [ "$m" = "PSG1218" ] || [ "$m" = "PSG712" ]; then
         #sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config
@@ -138,7 +133,8 @@ jobs:
         sed -i "s/^CONFIG_TOOLCHAIN_DIR=.*$/CONFIG_TOOLCHAIN_DIR=${CONFIG_TOOLCHAIN_DIR}/g" .config
         sudo ./clear_tree_simple
         sudo ./build_firmware_modify $m 0
-        sudo mv -f images/*.trx /opt/images/
+        sudo mkdir -p /opt/images
+        sudo mv -f images/*.trx /opt/images/.
         done
     - name: Upload firmware directory
       uses: actions/upload-artifact@v2
