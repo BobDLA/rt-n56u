@@ -89,7 +89,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config #内网穿透FRPC
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config #内网穿透FRPS
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config #TUNSAFE
-        echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> .config #阿里DDNS
+        echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config #smartdns
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=y" >> .config #smartdns二进制文件
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #v2ray二进制文件
@@ -108,19 +108,19 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TCPDUMP=n" >> .config #tcpdump ~0.6M
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA=n" >> .config #aria ~3.5M
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=n" >> .config #aria ~3.5M
-        echo "CONFIG_FIRMWARE_INCLUDE_MINIDLNA=y" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_INCLUDE_CIFS=y" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_INCLUDE_NFSC=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_INCLUDE_PARTED=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_ENABLE_UFSD=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_ENABLE_EXT4=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_ENABLE_EXT3=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_ENABLE_EXT2=n" >> .config #minidla ~1.6
+        echo "CONFIG_FIRMWARE_INCLUDE_MINIDLNA=n" >> .config #minidla ~1.6
+        echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >>
+        echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >>
+        echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=n" >>
+        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >>
+        echo "CONFIG_FIRMWARE_INCLUDE_CIFS=y" >> 
+        echo "CONFIG_FIRMWARE_INCLUDE_NFSC=n" >> 
+        echo "CONFIG_FIRMWARE_INCLUDE_PARTED=n" >> 
+        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=y" >> 
+        echo "CONFIG_FIRMWARE_ENABLE_UFSD=n" >> 
+        echo "CONFIG_FIRMWARE_ENABLE_EXT4=n" >> 
+        echo "CONFIG_FIRMWARE_ENABLE_EXT3=n" >>
+        echo "CONFIG_FIRMWARE_ENABLE_EXT2=n" >> 
         ####################################################################################
         #if [ "$m" = "PSG1208" ] || [ "$m" = "PSG1218" ] || [ "$m" = "PSG712" ]; then
         #sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config
