@@ -3,6 +3,9 @@ name: Build NEWIFI-MINI
 on: 
   release:
     types: [published]
+  push:
+    branches:
+      - master
 #  push:
 #    tags:
 #    - 'v*'
@@ -102,11 +105,11 @@ jobs:
         sudo ./build_firmware_modify $m 0
         sudo mv -f images/*.trx /opt/images/
         done
-    - name: Upload binaries to release
-      uses: svenstaro/upload-release-action@v1-release
+    - name: Upload firmware directory
+      uses: actions/upload-artifact@v2
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        repo_token: ${{ secrets.R_TOKEN }}
-        file: /opt/images/*.trx
-        tag: AtuoBuild
-        overwrite: true
-        file_glob: true
+        name: NEWIFI-MINI
+        path: /opt/images
+
+ 
