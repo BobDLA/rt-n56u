@@ -118,7 +118,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_PARTED=n" >> .config #minidla ~1.6
         echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> .config #minidla ~1.6
         echo "CONFIG_FIRMWARE_ENABLE_UFSD=n" >> .config #minidla ~1.6
-        echo "CONFIG_FIRMWARE_ENABLE_EXT4=y" >> .config #minidla ~1.6
+        echo "CONFIG_FIRMWARE_ENABLE_EXT4=n" >> .config #minidla ~1.6
         echo "CONFIG_FIRMWARE_ENABLE_EXT3=n" >> .config #minidla ~1.6
         echo "CONFIG_FIRMWARE_ENABLE_EXT2=n" >> .config #minidla ~1.6
         ####################################################################################
