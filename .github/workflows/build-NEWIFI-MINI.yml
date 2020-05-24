@@ -66,6 +66,15 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TCPDUMP/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_MINIDLNA/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_NANO/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_CURL/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_LRZSZ/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_CIFS/d' .config
+        
+        
+        
 
         ######################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
@@ -96,6 +105,12 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TCPDUMP=n" >> .config #tcpdump ~0.6M
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA=n" >> .config #aria ~3.5M
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=n" >> .config #aria ~3.5M
+        echo "CONFIG_FIRMWARE_INCLUDE_MINIDLNA=y" >> .config #minidla ~1.6
+        echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config #minidla ~1.6
+        echo "CONFIG_FIRMWARE_INCLUDE_CURL=n" >> .config #minidla ~1.6
+        echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=n" >> .config #minidla ~1.6
+        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config #minidla ~1.6
+        echo "CONFIG_FIRMWARE_INCLUDE_CIFS=y" >> .config #minidla ~1.6        
 
         ####################################################################################
         #if [ "$m" = "PSG1208" ] || [ "$m" = "PSG1218" ] || [ "$m" = "PSG712" ]; then
